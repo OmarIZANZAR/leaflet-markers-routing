@@ -13,8 +13,9 @@ You can get them through this link: https://nodejs.org/en
 
 ### Steps
 
-1. Run `npm install` to install all packages
-2. Run `npm start` to start the developement server
+1. Clone the project using git or download the zip file and extract it
+2. Run `npm install` to install all packages
+3. Run `npm start` to start the developement server
 
 you can use `npm build` to build the project but the user Leaflet server is not recommended for production.
 
