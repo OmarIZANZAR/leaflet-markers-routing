@@ -1,6 +1,6 @@
 import "./styles/App.css";
 import "leaflet/dist/leaflet.css";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { Markers, SideBar } from "./components";
 
@@ -27,29 +27,20 @@ function App() {
   };
 
   const removeMarker = (id) => {
-    if (!saved) {
-      setMarkers((pv) => pv.filter((mrk) => mrk.id !== id));
-    }
+    setMarkers((pv) => pv.filter((mrk) => mrk.id !== id));
   };
 
   const updateMarkerPosition = (id, lat, lng) => {
-    let updatedList = markers.map((mrk) => {
-      if (mrk.id === id) {
-        mrk.lat = lat;
-        mrk.lng = lng;
-      }
+    setMarkers((pv) =>
+      pv.map((mrk) => {
+        if (mrk.id === id) {
+          mrk.lat = lat;
+          mrk.lng = lng;
+        }
 
-      return mrk;
-    });
-    setMarkers(updatedList);
-  };
-
-  const save = () => {
-    setSaved(true);
-  };
-
-  const unsave = () => {
-    setSaved(false);
+        return mrk;
+      })
+    );
   };
 
   return (
@@ -76,8 +67,7 @@ function App() {
       </MapContainer>
       <SideBar
         saved={saved}
-        save={save}
-        unsave={unsave}
+        setSaved={setSaved}
         add={addDefaultMarker}
         markersList={markers}
       />

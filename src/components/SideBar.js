@@ -10,7 +10,7 @@ import {
   MdOutlineAdd,
 } from "react-icons/md";
 
-const SideBar = ({ saved, save, unsave, add, markersList }) => {
+const SideBar = ({ saved, setSaved, add, markersList }) => {
   return (
     <div className="sidebar">
       <p>
@@ -22,11 +22,19 @@ const SideBar = ({ saved, save, unsave, add, markersList }) => {
         <MdOutlineAdd size={20} className="icon" /> add
       </button>
 
-      <button className="save_btn" onClick={save} disabled={saved}>
+      <button
+        className="save_btn"
+        onClick={() => setSaved(true)}
+        disabled={saved}
+      >
         <MdOutlineSave size={20} className="icon" /> save
       </button>
 
-      <button className="edit_btn" onClick={unsave} disabled={!saved}>
+      <button
+        className="edit_btn"
+        onClick={() => setSaved(false)}
+        disabled={!saved}
+      >
         <MdOutlineModeEditOutline size={20} className="icon" />
         edit
       </button>

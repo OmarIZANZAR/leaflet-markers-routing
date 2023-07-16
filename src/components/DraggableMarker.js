@@ -32,10 +32,12 @@ const DraggableMarker = ({
         }
       },
       click() {
-        removeMarker(id);
+        if (draggable) {
+          removeMarker(id);
+        }
       },
     }),
-    []
+    [draggable]
   );
 
   return (
