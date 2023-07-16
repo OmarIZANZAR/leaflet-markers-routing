@@ -17,7 +17,7 @@ You can get them through this link: https://nodejs.org/en
 2. Run `npm install` to install all packages
 3. Run `npm start` to start the developement server
 
-you can use `npm build` to build the project but the user Leaflet server is not recommended for production.
+you can use `npm build` to build the project but the used Leaflet server is not recommended for production.
 
 ## Tech Stacks
 
