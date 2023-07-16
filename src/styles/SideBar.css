@@ -1,0 +1,154 @@
+.sidebar {
+  background-color: white;
+  flex: 2;
+  height: 100%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 7px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.sidebar p {
+  background-color: #fffeb8;
+  padding: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f7f43e;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.sidebar p .icon {
+  margin-right: 5px;
+}
+
+.sidebar button {
+  background-color: white;
+  height: min-content;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar button .icon {
+  margin: 0 5px;
+}
+
+.sidebar button:hover {
+  opacity: 90%;
+}
+
+.sidebar button:active {
+  opacity: 80%;
+}
+
+.sidebar .add_btn {
+  background-color: #46c3db;
+  border: 1px solid #3cc2dd;
+}
+
+.sidebar .save_btn {
+  background-color: #4db88d;
+  border: 1px solid #3cc28c;
+}
+
+.sidebar .edit_btn {
+  background-color: #feb062;
+  border: 1px solid #faa551;
+}
+
+h4 {
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.markers_list {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.markers_list {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #d9d9d9;
+}
+
+/* Chrome, Edge, and Safari */
+.markers_list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.markers_list::-webkit-scrollbar-track {
+  background: #e9e9e963;
+}
+
+.markers_list::-webkit-scrollbar-thumb {
+  background-color: #00000030;
+  border-radius: 1px;
+  border: 3px solid #00000030;
+}
+
+.marker_item {
+  height: 35px;
+  width: 100%;
+  margin-bottom: 5px;
+  border: 1px solid #071a52;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marker_item > div:first-child {
+  background-color: #071a52;
+  width: 40px;
+  padding: 5px;
+  height: 100%;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker_item > div:last-child {
+  height: 100%;
+  flex: 1;
+  padding: 5px;
+
+  font-size: 1rem;
+  /* font-weight: 700; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.marker_item > div span {
+  height: min-content;
+  width: 90px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1;
+  overflow: hidden;
+}
