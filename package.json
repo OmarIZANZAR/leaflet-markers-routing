@@ -1,5 +1,5 @@
 {
-  "name": "twende-map",
+  "name": "leaflet-markers-routing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
